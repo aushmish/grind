@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <div>
+            <div id="todo1">
+                <h4>1.Take class</h4>
+                <button onclick="deleteTodo(1)">delete</button>
+            </div>
+            <div id="todo2">
+                <h4>2.Go out to eat</h4>
+                <button onclick="deleteTodo(2)">delete</button>
+            </div>
+        </div>
+
+        <input type="text"/>
+        <button>Add Todo</button>
+    </body>
+    <script>
+        function deleteTodo(index){
+            const elementDel=document.getElementById("todo"+index);
+            elementDel.parentNode.removeChild(elementDel);
+        }
+    </script>
+</html>
