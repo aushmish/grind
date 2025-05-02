@@ -1,0 +1,16 @@
+<html>
+    <body>
+        
+        <h2>1.Todo</h2>
+        <h2>2.Todo</h2>
+        <h2>3.Todo</h2>
+        <button onclick="deleteTodo()">Delete</button>
+    </body>
+
+    <script>
+        function deleteTodo(index){
+            const delEl=document.querySelector("h2");
+            delEl.parentNode.removeChild(delEl);
+        }
+    </script>
+</html>
