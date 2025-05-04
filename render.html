@@ -1,0 +1,40 @@
+<html>
+    <body>
+        <input type="text"></input>
+        <button onclick="addTodo()">AddTodo</button>
+        <div id="todo"></div>
+
+    </body>
+
+    <script>
+        let todos=[];
+        function addTodo(){
+            todos.push({
+                title:document.querySelector("input").value
+            })
+            render();
+        }
+        
+        function createTodoComponent(todo){
+            const todo=todos[i];
+            const newDiv=document.createElement("div");
+            const H1=document.createElement("h1");
+            const newButton=document.createElement("button");
+            newButton.innerHTML="Delete";
+            H1.innerHTML=todo.title;
+            newDiv.append(H1);
+            newDiv.append(newButton);
+        }
+
+
+        function render(){
+            document.querySelector("#todo").innerHTML="";
+
+            for(let i=0;i<todos.length;i++){
+                const element=createTodoComponent(todos[i]);
+                document.querySelector("#todo").appendChild(newDiv);
+            }
+        }
+
+    </script>
+</html>
